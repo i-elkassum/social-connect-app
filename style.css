@@ -1,0 +1,524 @@
+body{
+    padding-top: 80px;
+    background-color: #f5f6f7;
+}
+
+
+.nav-link{
+    cursor: pointer;
+}
+
+
+/* تنسيق النافبار العام - تأثير زجاجي */
+.navbar {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px); /* تغبيش الخلفية خلف النافبار */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* تحويل الأزرار إلى أزرار حديثة */
+.btn {
+    border-radius: 8px; /* زوايا أقل حدة */
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+}
+
+/* زر تسجيل الدخول */
+#login-btn, #register-btn {
+    background-color: #f0f2f5;
+    color: #1877f2;
+}
+
+#login-btn:hover, #register-btn:hover {
+    background-color: #e4e6eb;
+    transform: translateY(-2px); /* رفعة بسيطة عند التمرير */
+}
+
+/* زر الخروج العصري */
+#logout-btn {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+#logout-btn:hover {
+    background: #dc3545;
+    color: white;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* تنسيق صورة المستخدم في النافبار */
+#nav-user-image {
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border: 2px solid #1877f2;
+    padding: 2px;
+}
+
+/* تنسيق اسم المستخدم */
+#nav-username {
+    margin: 0 10px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+
+
+
+/* تنسيق كلمة Facebook (Brand) */
+.navbar-brand {
+    font-weight: 800; /* خط عريض جداً */
+    font-size: 1.6rem;
+    color: #1877f2 !important; /* لون فيسبوك المميز */
+    letter-spacing: -1px; /* تقريب الحروف لبعضها لمظهر عصري */
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05); /* تكبير بسيط عند التأشير */
+}
+
+
+
+
+
+/* تأثير عند تمرير الماوس */
+.nav-link:hover {
+    background-color: rgba(24, 119, 242, 0.1); /* خلفية زرقاء خفيفة جداً */
+    border-radius: 8px;
+}
+
+
+.nav-link:hover {
+    color: #1877f2 !important; /* التغيير للون الأزرق عند التأشير */
+}
+
+/* تمييز الرابط النشط (Active) */
+.nav-link.active {
+    color: #1877f2 !important;
+    font-weight: 700;
+}
+
+
+
+
+
+.card-body h6{
+    color: rgb(177, 177, 177);
+}
+
+div .card{
+    margin-bottom: 30px;
+    
+}
+
+#add-btn{
+    position: fixed;
+    bottom: 5%;
+    right: 7%;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0, 0.4);
+    z-index: 45;
+}
+#add-btn::after {
+    content: "+";
+    font-size: 60px;
+    color:white;
+    font-family: Arial, sans-serif;
+    display: block;
+    /* تحريك بسيط جداً لتعويض انحراف الخطوط أحياناً */
+    transform: translateX(13px) translateY(-14px);
+}
+
+
+#post-body-input{
+    width: 100%;
+    height: 70px;
+    border-color: rgb(191, 8, 8);
+    border-radius: 10px;
+    resize: none;
+}
+
+#logout-div img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+#logout-div{
+    justify-content: end;
+    align-items: center;
+}
+
+#nav-username{
+    margin: 0 8px;
+}
+
+#success-alert{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 30%;
+}
+
+.card-body{
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+    border-radius: 12px;
+}
+
+
+
+
+/* حاوية التعليقات */
+.comments {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* صورة المستخدم في التعليق */
+.comment-img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+/* فقاعة التعليق */
+.comment-body {
+    background-color: #e9ecef; /* لون هادئ بدلاً من البنفسجي القوي */
+    border-radius: 18px; /* زوايا مستديرة جداً لتعطي شكل الفقاعة */
+    max-width: 85%;
+    position: relative;
+    padding: 10px 15px !important;
+}
+
+/* اسم المستخدم داخل التعليق */
+.comment-header b {
+    font-size: 1rem;
+    color: #0866ff; /* لون أزرق احترافي */
+}
+
+/* نص التعليق */
+.comment-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* تأثير عند تمرير الفأرة على التعليق */
+.comment-item:hover .comment-body {
+    background-color: #dee2e6;
+    transition: background 0.3s ease;
+}
+
+
+
+
+
+
+/* الحاوية الخارجية لإعطاء مساحة */
+.add-comment-wrapper {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+/* تنسيق مجموعة الإدخال */
+#add-comment-div {
+    border: 2px solid #e9ecef;
+    border-radius: 25px; /* زوايا دائرية جداً لتعطي شكل الفقاعة */
+    overflow: hidden; /* لضمان عدم خروج الزر عن حدود الزوايا الدائرية */
+    transition: all 0.3s ease;
+}
+
+/* حالة التركيز (عندما يضغط المستخدم للكتابة) */
+#add-comment-div:focus-within {
+    border-color: #0866ff; /* يتغير اللون للأزرق عند الكتابة */
+    box-shadow: 0 4px 12px rgba(8, 102, 255, 0.1);
+}
+
+/* حقل الإدخال نفسه */
+#comment-input {
+    border: none;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+}
+
+/* زر الإرسال */
+#add-comment-div .btn-primary {
+    background-color: #0866ff;
+    border: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+#add-comment-div .btn-primary:hover {
+    background-color: #0052cc;
+}
+
+
+
+
+/* تنسيق زر التعديل المطور */
+.card-header button{
+    /* الإزاحة والتموضع */
+    margin-left: auto; /* يدفعه لليمين في حال استخدام flexbox */
+    
+    /* الألوان والخلفية */
+    background-color: #d1e8ff; /* لون فاتح جداً واحترافي */
+    color: #007bff; /* رمادي داكن للنص */
+    border: 1px solid #dee2e6; /* إطار خفيف جداً */
+    
+    /* الخط والابعاد */
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    
+    transition: all 0.2s ease;
+}
+
+/* حالة الهوفر - طابع احترافي */
+.card-header button:hover {
+    background-color: #007bff; /* يتحول للأزرق الهادئ عند الهوفر */
+    color: white; /* النص يصبح أبيض */
+    border-color: #007bff;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2); /* ظل أزرق خفيف */
+}
+
+/* تأثير عند الضغط */
+.card-header button:active {
+    transform: translateY(1px); /* شعور حقيقي بالضغط */
+    background-color: #0069d9;
+}
+
+
+
+
+
+
+/* تنسيق زر الحذف الاحترافي */
+#btn-delete {
+    background-color: #fff1f0; /* خلفية حمراء باهتة جداً */
+    color: #ff4d4f; /* لون نص أحمر واضح */
+    border: 1px solid #ffccc7; /* إطار أحمر خفيف */
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: 8px; /* مسافة بسيطة بينه وبين زر التعديل */
+}
+
+/* تأثير الهوفر - يتحول للأحمر الكامل */
+#btn-delete:hover {
+    background-color: #ff4d4f; /* أحمر صريح */
+    color: white; /* نص أبيض */
+    border-color: #ff4d4f;
+    box-shadow: 0 2px 8px rgba(255, 77, 79, 0.3); /* ظل أحمر ناعم */
+    transform: translateY(-1px);
+}
+
+/* تأثير عند الضغط */
+#btn-delete:active {
+    transform: scale(0.95);
+    background-color: #d9363e;
+}
+
+
+
+
+
+/* تنسيق مودال الحذف */
+#delete-post-modal .modal-content {
+    border: none;
+    border-radius: 15px; /* حواف ناعمة */
+    overflow: hidden;
+}
+
+#delete-post-modal .modal-header {
+    background-color: #f8f9fa; /* لون خلفية خفيف للرأس */
+    border-bottom: 1px solid #eee;
+}
+
+#delete-post-modal .modal-title {
+    color: #333;
+    font-weight: 700;
+}
+
+/* تمييز اسم البوست المراد حذفه */
+#delete-post-title {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* إذا كان الاسم طويلاً سيضع نقاط ... */
+    vertical-align: bottom;
+}
+
+#delete-post-modal .modal-footer {
+    padding: 1.5rem;
+}
+
+/* زر الحذف داخل المودال */
+#delete-post-modal .btn-danger {
+    padding: 8px 25px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #dc3545;
+    transition: all 0.3s ease;
+}
+
+#delete-post-modal .btn-danger:hover {
+    background-color: #bb2d3b;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+}
+
+
+
+
+
+/*   تنسيقات صفحة البروفايل   */
+
+
+/* تأثير الأرقام الكبيرة */
+
+
+    /* تنسيق عنوان البروفايل */
+.profile-tiltle {
+    font-weight: 800; /* خط عريض جداً */
+    color: #1c1e21; /* لون داكن احترافي */
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block; /* لكي يكون الخط السفلي على مقاس الكلمة فقط */
+}
+
+/* إضافة خط ملون تحت الكلمة ليعطي لمسة تقنية */
+.profile-tiltle::after {
+    content: "";
+    display: block;
+    width: 50%; /* طول الخط */
+    height: 5px;
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0); /* تدرج لوني أزرق */
+    border-radius: 10px;
+    margin-top: 5px;
+
+}
+
+
+.stat-number {
+    line-height: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+}
+
+/* فاصل عمودي في الشاشات الكبيرة فقط */
+@media (min-width: 768px) {
+    .border-end {
+        border-right: 2px solid #f1f1f1 !important;
+    }
+}
+
+/* استجابة الصورة في الجوال */
+@media (max-width: 768px) {
+    .col-md-6 {
+        text-align: center;
+        justify-content: center !important;
+    }
+    .ms-4 {
+        margin-left: 0 !important;
+        margin-top: 15px;
+    }
+    .border-end {
+        border-right: none !important;
+        border-bottom: 2px solid #f1f1f1;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  
+  aspect-ratio: 1;
+  display: grid;
+  position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); /* لضمان التوسط الدقيق */
+z-index: 9999;
+
+  background:
+    linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
+    linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+   content: "";
+   grid-area: 1/1;
+   border-radius: 50%;
+   background: inherit;
+   opacity: 0.915;
+   transform: rotate(30deg);
+}
+.loader::after {
+   opacity: 0.83;
+   transform: rotate(60deg);
+}
+
+.loader {
+    /* التموضع في منتصف الشاشة بشكل دائم */
+    
+    /* التصميم الجمالي للحاوية */
+    width: 80px;  /* حجم الحاوية */
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2); /* خلفية شفافة */
+    backdrop-filter: blur(10px);        /* تأثير ضبابي احترافي */
+    border: 1px solid rgba(255, 255, 255, 0.9); /* بوردر خفيف جداً */
+    border-radius: 15px;                /* زوايا منحنية احترافية */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* ظل ناعم */
+    
+    /* عرض الـ Loader الداخلي (الدائرة) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* تصميم الدائرة المتحركة (تأثير الصورة التي أرفقتها) */
+.loader::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: 4px solid #dddddd;
+    border-top: 4px solid #3498db; /* لون الجزء النشط */
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* حركة الدوران */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
